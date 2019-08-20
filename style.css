@@ -1,0 +1,39 @@
+body{
+    margin:0;
+}
+video.fullscreen {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+    transform: translate(-50%, -50%);
+}
+.video{
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+.columns{
+    height: 30vh;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+
+}
+.columns .col{
+    width:100%;
+    background: #ccc;
+    border: 1px solid #000;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.col:hover{
+    width:200%;
+}
