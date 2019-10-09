@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="video">
-    <video class="fullscreen" src="assets/The-Slow-Dock.mp4"  autoplay />
+    <video class="fullscreen" src="assets/The-Slow-Dock.mp4"  autoplay loop/>
 </div>
 <div class="columns">
     <div class="col"></div>
