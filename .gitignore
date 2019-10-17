@@ -1,1 +1,9 @@
-assets
+wp-admin
+wp-content/plugins
+wp-content/uploads
+wp-content/upgrade
+wp-content/mu-plugins
+wp-content/languages
+wp-includes
+.idea
+__MACOSX
