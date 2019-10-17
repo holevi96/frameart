@@ -1,0 +1,426 @@
+body.category{
+  background: #fff;
+}
+.archive.category{
+  #container{
+    min-height: 67vh;
+  }
+}
+.post-type-archive-nyomda_technikak{
+  .szolgaltatasok{
+    padding-top: 0;
+  }
+}
+.szolgaltatas-nav{
+  margin-top: 2rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  @media #{$sm},#{$xs},#{$md}{
+    border:0;
+  }
+  div{
+    background-position: 0px 250px;
+    &.active{
+      &:after{
+        display:none;
+      }
+      &+div{
+        &:after{
+          display:none;
+        }
+      }
+    }
+    position: relative;
+    &:after{
+      display: block;
+      content: '';
+      z-index: 10;
+      width: 1px;
+      height: 20px;
+      background: #ccc;
+      position: absolute;
+      left: -1px;
+      top: 36px;
+    }
+    &:nth-child(1){
+      &:after{
+        display:none;
+      }
+    }
+    position: relative;
+    &:first-child{
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      &:before{
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+
+    }
+    &:last-child{
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      &:before{
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    }
+    @media #{$sm},#{$xs},#{$md}{
+      padding:0.5rem;
+      width: calc(50% - 30px);
+      float: left;
+      margin: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      
+    }
+    text-align: center;
+    @extend .md-text;
+    width:100%;
+    &:before{
+      display:block;
+      content: '';
+      @include tr(0.4s);
+      width:100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(255,255,255,1);
+      @media #{$sm},#{$xs},#{$md}{
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+      }
+    }
+    &:hover{
+      &:before{
+        background: rgba(255,255,255,0.7);
+      }
+    }
+    &.active{
+      &:before{
+        background: rgba(0, 0, 0, 0.15);
+      }
+      a{
+        color:white;
+      }
+    }
+    a{
+      padding:2rem;
+      display:block;
+      color:black;
+      position:relative;
+      text-decoration: none;
+      font-weight: bold;
+      @include tr(0.4s);
+      span{
+        position: relative;
+        z-index: 10;
+      }
+      &:hover{
+        //color:#fff;
+      }
+      @media #{$sm},#{$xs},#{$md}{
+        padding:0.5rem;
+        font-size:12px;
+      }
+    }
+/*    &.nyomda{
+      background-image:url(#{$baseURL}/img/nyomdatechnika.jpg);
+      background-size: cover;
+
+      &.active{
+        border:1px transparent;
+        background-image:url(#{$baseURL}/img/nyomdatechnika.jpg);
+        background-size: cover;
+      }
+    }
+
+    &.design{
+
+      background-image:url(#{$baseURL}/img/design_active.png);
+      background-size: cover;
+      &.active{
+        background-image:url(#{$baseURL}/img/design_active.png);
+        border:1px transparent;
+        background-size: cover;
+      }
+    }
+
+    &.kihelyezes{
+
+      background-image:url(#{$baseURL}/img/kihelyezes_active.png);
+      background-size: cover;
+      &.active{
+
+        background-image:url(#{$baseURL}/img/kihelyezes_active.png);
+        background-size: cover;
+      }
+    }
+    &.textil_nyomtatas{
+
+      background-image:url(#{$baseURL}/img/textil.jpg);
+      background-size: cover;
+      &.active{
+        border:1px transparent;
+        background-image:url(#{$baseURL}/img/textil.jpg);
+        background-size: cover;
+      }
+    }*/
+  }
+}
+.category-filter{
+  margin-top: 2rem;
+  .flexrow{
+    @media #{$sm},#{$xs},#{$md}{
+      display:block;
+      width: 80%;
+    }
+  }
+
+  ul{
+    margin: 0 auto;
+    justify-content: center;
+    @media #{$sm},#{$xs},#{$md}{
+      padding:0;
+    }
+    li{
+      padding: 1rem 5rem;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      @extend .md-text;
+      cursor:pointer;
+
+      border: 1px solid #EFEFF4;
+      border-bottom: 0;
+      &:nth-child(2){
+        border-left:0;
+        border-right: 0;
+      }
+      &.active{
+        background:#EFEFF4;
+        border:0;
+        border-top:1px solid #EFEFF4;
+      }
+      @media #{$sm},#{$xs},#{$md}{
+       width:33%;
+        float:left;
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.category-4 .szolgaltatasok .szolgaltatas{
+  width:calc(25% - 10px) !important;
+  h3{
+    width: calc(100% - 2rem);
+    left:1rem;
+  }
+
+}
+.szolgaltatasok{
+  @media #{$sm},#{$xs},#{$md}{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .entry-title{
+    position: relative;
+    top:-10rem;
+    display:none;
+  }
+  padding-top: 10rem;
+  background:#EFEFF4;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  .szolgaltatas{
+    @media #{$sm},#{$xs},#{$md}{
+      width:97%;
+    }
+    margin: 5px;
+    box-sizing: border-box;
+    position: relative;
+    width:calc(33% - 10px);
+
+    text-align: center;
+    margin-bottom: 5px;
+
+
+      display:block;
+      img{
+        width: calc(100%);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+      }
+
+    a{
+      &:before{
+        content: '';
+        width: 100%;
+        height:100%;
+        background:#ccc;
+        opacity: 0;
+        position: absolute;
+        top:0;
+        left:0;
+        display:block;
+        @include tr(0.2s);
+
+      }
+    }
+    h3{
+      position: absolute;
+      bottom: 1rem;
+      background: rgba(255, 255, 255, 0.87);
+      width: calc(100% - 4rem);
+      border-radius: 10px;
+      left: 2rem;
+      text-decoration: none;
+      color:rgba(0, 0, 0, 0.87);
+      padding: 1rem;
+      display:block;
+      a{
+
+      }
+      @extend .md-text;
+
+    }  
+    .placeholder{
+      height:300px;
+      background:#333;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+    @include tr(0.2s);
+    &:hover{
+        transform: scale(1.02);
+      a{
+        &:before{
+          opacity: 0.2;
+        }
+      }
+
+    }
+
+  }
+
+}
+.single-szolgaltatasok,.modal{
+
+
+    h2{
+      @extend .lg-text;
+      margin-bottom: 1rem;
+    }
+    p{
+      @extend .sm-text;
+    }
+    .advgb-columns-wrapper{
+     /* margin-top: 4rem;*/
+
+    }
+
+}
+.single-szolgaltatasok,.modal-wrapper{
+  .pictures{
+    margin-top: 2rem;
+  }
+  .main-carousel{
+    margin-bottom: 4rem;
+  }
+  .carousel-cell{
+    width: 25%;
+    padding: 1rem;
+    img{
+      width: 100%;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+  }
+
+}
+.szolg-gallery{
+  .picture{
+    width:calc(25% - 10px);
+  }
+}
+.archive .modal-wrapper{
+  display:none;
+  @include tr(0.3s);
+  opacity: 0;
+  &.show{
+    display: flex !important;
+    opacity: 1;
+  }
+  .entry-title{
+    margin-top: 1rem !important;
+    margin-bottom: 4rem !important;
+  }
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  //background: rgba(20,20,20,0.3);
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  .modal{
+    margin:auto;
+    background:white;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 20px;
+    width: 90%;
+    padding:2rem 4rem;
+    min-height: 20vh;
+    max-height: 90vh;
+    padding-right: 1.5rem;
+    padding-top: 4rem;
+  i{
+    float: right;
+    position: relative;
+    right: 10px;
+    cursor:pointer;
+    top: 10px;
+  }
+    .fluid-container{
+      width:100%;
+    }
+    .close-modal{
+      right: 20px;
+      top: 5px;
+      outline:none;
+    }
+    .modal-content{
+      padding: 1rem 2rem;
+      text-align:center;
+    }
+    #modal-content{
+      max-height: 75vh;
+      overflow-y: auto;
+      padding-right:2rem;
+    }
+  }
+}
+
+.pswp__img{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+
+}
+
+.post-type-archive-nyomda_technikak .szolgaltatasok .szolgaltatas{
+  background:white;
+  border-radius: 10px;
+}

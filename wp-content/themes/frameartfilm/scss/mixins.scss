@@ -1,0 +1,12 @@
+@mixin tr($transition-speed) {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: $transition-speed ;
+  -moz-transition-duration: $transition-speed;
+  -o-transition-duration: $transition-speed;
+  -ms-transition-duration: $transition-speed;
+  transition-duration: $transition-speed;
+}

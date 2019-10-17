@@ -1,0 +1,372 @@
+body.fixed{
+  padding-top:82px;
+}
+.home-title:hover{
+  .entry-title:after{
+    width: 90px;
+  }
+}
+.splash{
+  height: 70vh;
+  width:100%;
+  background: url(#{$baseURL}/img/hero.jpg) center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  @media #{$xs}, #{$sm} {
+    height: 30vh;
+  }
+}
+
+.video{
+  @media #{$sm},#{$xs},#{$md}{
+  display:none;
+  }
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+  .fullscreen {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+    transform: translate(-50%, -50%);
+  }
+}
+a{
+  display:block;
+}
+#szolgaltatasok{
+  padding-bottom: 3rem;
+}
+#referenciak .p-button{
+  margin-top: 3rem;
+}
+#partnereink{
+  padding-bottom: 3rem;
+}
+.home{
+  .flexrow a{
+    width:100%;
+    box-sizing: border-box;
+    padding: 3px;
+    img{
+      border-radius: 10px;
+    }
+  }
+  .szolgaltatas{
+    width:25%;
+    position: relative;
+    img{
+      width:100%;
+    }
+    h2{
+      color:#fff;
+      text-decoration: none;
+      position: absolute;
+      bottom: 1rem;
+      display: block;
+      width: calc(100% - 2rem);
+      text-align: center;
+      padding: 1rem;
+      @include tr(0.2s);
+      margin-left: 1rem;
+      background: #222222f0;
+      border-radius: 10px;
+      @extend .md-text;
+      @media #{$sm},#{$xs},#{$md}{
+        padding:10px;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        font-size:13px;
+      }
+
+    }
+    @media #{$sm},#{$xs},#{$md}{
+      width:50%;
+      float: left;
+    }
+    @include tr(0.2s);
+    &:hover{
+      transform: scale(1.02);
+      -webkit-transform:scale(1.02);
+      h2{
+        background:#fff;
+        color:#222222f0;
+      }
+    }
+  }
+}
+#referenciak,#rolunk{
+  background: #fff;
+  padding: 2rem 0;
+
+}
+.home .referenciak{
+  height: 68vh !important;
+  overflow: hidden;
+}
+.referenciak{
+  position: relative;
+  columns: 3;
+  column-gap: 1rem;
+
+  @media #{$sm},#{$xs},#{$md}{
+    padding:2rem 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 30vh !important;
+  }
+  .referencia{
+    width:calc(33% - 10px);
+    margin: 5px;
+    cursor:pointer;
+    &:before{
+      content: '';
+      width: 100%;
+      height:100%;
+      background:#ccc;
+      opacity: 0;
+      position: absolute;
+      top:0;
+      left:0;
+      display:block;
+      @include tr(0.2s);
+
+    }
+    @media #{$sm},#{$xs}{
+      margin:2px;
+      width:calc(30% - 4px);
+    }
+    @media #{$md}{
+      width:calc(31% - 4px);
+    }
+    img{
+      width:100%;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      @media #{$sm},#{$xs},#{$md}{
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+      }
+    }
+    &:hover{
+      transform: scale(1.02);
+      -webkit-transform:scale(1.02);
+
+        &:before{
+          opacity: 0.2;
+        }
+
+
+    }
+  }
+  .grid-sizer{
+    width:30%;
+
+
+   /* width: 100%;
+    margin-top: 0.5rem;
+    display: inline-block;*/
+    img{
+      width:100%;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+  }
+  .fader{
+    position: absolute;
+    bottom: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0)), to(rgb(255, 255, 255)));
+    height: 9rem;
+    left: 0;
+    width: 100%;
+    @media #{$sm},#{$xs},#{$md}{
+      /*display:none;*/
+    }
+  }
+  @media #{$sm},#{$xs},#{$md}{
+    columns:1;
+  }
+}
+.imgrow{
+  align-items: center;
+  margin-top: 4rem;
+  padding:2rem;
+  h2{
+    @extend .lg-text;
+  }
+  p{
+    @extend .sm-text;
+    margin:1rem 0;
+  }
+  img{
+    margin-left:2rem;
+    width: 40%;
+    border-radius: 10px;
+
+    @media #{$sm},#{$xs},#{$md}{
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 0;
+    }
+  }
+  &.left{
+    img{
+      margin-right: 2rem;
+    }
+  }
+
+}
+#nyomdatechnika{
+  padding-bottom: 2rem;
+}
+.partnereink{
+  margin-bottom: 3rem;
+  .main-carousel{
+    width:100%;
+    .carousel-cell{
+      width:25%;
+      padding: 1rem;
+      .logo{
+        div{
+
+          height: 50px;
+          margin: 0 auto;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          border-radius: 50px;
+          margin-bottom: 2rem;
+          img{
+            height: 100%;
+          }
+        }
+      }
+      p{
+        @extend .sm-text;
+      }
+      @media #{$sm},#{$xs},#{$md}{
+        width:100%;
+      }
+    }
+
+  }
+
+}
+.flickity-button{
+  @media #{$sm},#{$xs},#{$md}{
+    display:none;
+  }
+}
+#kapcsolat{
+  .tagok{
+    margin: 2rem 4rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    div{
+      &:nth-child(2){
+        flex-direction: row-reverse;
+      }
+      display:flex;
+
+      img{
+        width:70px;
+        height: auto;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+      }
+      div{
+        display:block;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        h3{
+          @extend .md-text;
+        }
+        h4,p{
+          @extend .sm-text;
+        }
+      }
+
+    }
+  }
+  .kapcsolat{
+    margin:2rem 4rem;
+    padding:1rem;
+    @media #{$sm},#{$xs},#{$md}{
+      margin:2rem 1rem;
+    }
+    span{
+      width:48%;
+    }
+    .message{
+      span{
+        width:100%;
+      }
+    }
+    input[type="text"],input[type="email"]{
+      width:100%;
+      border:0;
+      padding:1rem;
+      margin-bottom: 1rem;
+      @extend .sm-text;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+    textarea{
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      width:100%;
+      margin:2rem 0;
+      border:0;
+      padding:1rem;
+    }
+    input[type="submit"]{
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+    .kapcsolat-notice{
+      text-align: left;
+      position: relative;
+      top: -25px;
+      display: block;
+      @extend .sm-text;
+    }
+
+
+  }
+}
+
+.wpcf7-response-output{
+  @extend .md-text;
+  text-align:left;
+  border:0 !important;
+  font-style: italic;
+  &.wpcf7-mail-sent-ok{
+    color:darkgreen;
+  }
+  &.wpcf7-validation-errors{
+    color:darkred;
+  }
+}
+.wpcf7-not-valid-tip{
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  text-align: right;
+  font-size:15px !important;
+  font-family: Open Sans;
+}
+

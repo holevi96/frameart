@@ -1,0 +1,102 @@
+
+
+
+$spacing-unit: 5px;
+
+/*
+$padding{
+
+@media  $xs  {$spacing-unit};
+@media  $sm  {$spacing-unit * 2};
+@media  $md  {$spacing-unit * 2};
+@media  $lg  {$spacing-unit * 3};
+@media  $xl  {$spacing-unit * 3};
+@media  $xxl {$spacing-unit * 4};
+
+}
+*/
+
+
+
+
+.general-container{
+
+  // Container General
+  //------------------
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 1px;
+
+  position: relative;
+
+  &:before{
+    clear: both;
+  }
+
+  &:after{
+    @extend .clear;
+  }
+}
+
+
+.containeer-gutter{
+  // Container Gutters
+  //------------------
+  @media #{$xs} {
+    padding-left:  $gutter-small / 2;
+    padding-right: $gutter-small / 2;
+  }
+
+  @media #{$sm} {
+    padding-left:  $gutter-small / 2;
+    padding-right: $gutter-small / 2;
+  }
+
+  @media #{$md} {
+    padding-left:  $gutter-small / 2;
+    padding-right: $gutter-small / 2;
+  }
+
+  @media #{$lg}, #{$xl}, #{$xxl} {
+    padding-left:  $gutter / 2;
+    padding-right: $gutter / 2;
+  }
+}
+
+.fluid-container{
+  @extend .general-container;
+  @extend .containeer-gutter;
+
+  // Container Width
+  //---------------
+  @media #{$xs}     {width: $container-xs}
+  @media #{$sm}     {width: $container-sm}
+  @media #{$md}     {width: $container-md}
+  @media #{$lg}      {width: $container-lg}
+  @media #{$xl}      {width: $container-xl}
+  @media #{$xxl}     {width: $container-xxl}
+}
+
+
+@mixin center-container($center-container-md, $container-lg, $center-container-xl, $center-container-xxl) {
+  @extend .general-container;
+  // Container Width
+  //---------------
+  @media #{$xs}     {width: 100%}
+  @media #{$sm}     {width: 100%}
+  @media #{$md}     {width: $center-container-md}
+  @media #{$lg}      {width: $container-lg}
+  @media #{$xl}      {width: $center-container-xl}
+  @media #{$xxl}     {width: $center-container-xxl}
+}
+
+.flexrow{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  @media #{$sm},#{$xs},#{$md}{
+    display:block;
+  }
+}
