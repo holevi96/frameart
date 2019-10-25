@@ -25,6 +25,7 @@ function blankslate_load_scripts()
     wp_enqueue_style('photoswipe.css', get_stylesheet_directory_uri()."/css/photoswipe.css");
     wp_enqueue_script('jquery');
     wp_enqueue_script('flickity.js', get_stylesheet_directory_uri() . "/js/flickity.js", array('jquery'));
+    wp_enqueue_script('vivus.min.js', get_stylesheet_directory_uri() . "/js/vivus.min.js", array('jquery'));
 
     wp_enqueue_script('photoswipe.min.js', get_stylesheet_directory_uri() . "/js/photoswipe.min.js", array('jquery'));
     wp_enqueue_script('photoswipe-ui-default.min', get_stylesheet_directory_uri() . "/js/photoswipe-ui-default.min.js", array('jquery'));
@@ -175,3 +176,14 @@ acf_add_options_page(array(
     'capability'	=> 'edit_posts',
     'redirect'		=> false
 ));
+add_filter( 'upload_mimes', 'my_myme_types', 1, 1 );
+function my_myme_types( $mime_types )
+{
+    $mime_types['svg'] = 'image/svg+xml';     // Adding .svg extension
+    $mime_types['json'] = 'application/json'; // Adding .json extension
+
+    unset($mime_types['xls']);  // Remove .xls extension
+    unset($mime_types['xlsx']); // Remove .xlsx extension
+
+    return $mime_types;
+}

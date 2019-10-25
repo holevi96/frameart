@@ -7,7 +7,7 @@ body.mobilemenu{
   background:white;
 
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
   border-bottom: 2px solid $grey;
@@ -28,20 +28,31 @@ body.mobilemenu{
     }
   }
   #logo{
+    height: 60px;
+    a{
+      height: 100%;
+      width:auto;
+      display:block;
+      img{
+        height: 100%;
+        width:auto;
+      }
+    }
 
   }
   nav{
+    margin-top: 1rem;
     @include tr(0.1s);
     ul{
       li{
         @include tr(0.2s);
         float: left;
         margin-right: 15px;
-        -webkit-border-radius: 38px;
-        -moz-border-radius: 38px;
-        border-radius: 38px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
 
-        @extend .md-text;
+        @extend .sm-text;
         &:hover{
         background: #EFEFF4;
           //a{
@@ -50,17 +61,17 @@ body.mobilemenu{
         }
         a{
           color:rgba(0,0,0,0.87);
-          padding: 10px;
+          padding: 5px;
           padding-left: 20px;
           padding-right: 20px;
 
           display:block;
         }
         &.current-menu-item{
-          background: $blue;
+          border: 1px solid #000;
 
           a{
-            color:#fff;
+            color:#000;
           }
         }
         &#menu-item-131.current-menu-item{

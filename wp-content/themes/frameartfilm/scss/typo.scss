@@ -1,7 +1,7 @@
 .xxl-text{
-  font-family: Open Sans;
+  font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 36px;
   line-height: 49px;
   position: relative;
@@ -9,20 +9,7 @@
   margin-bottom: 30px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.87);
-  &:after{
-    display: block;
-    content: '';
-    width: 80px;
-    margin: 0 auto;
-    position: relative;
-    bottom: -8px;
-    height: 6px;
-    background: $blue;
-    @include tr(0.2s);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-  }
+
   @media #{$sm},#{$xs},#{$md}{
     font-size: 20px;
     line-height: 25px;
@@ -30,16 +17,17 @@
 }
 
 .lg-text{
-  font-family: Open Sans;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 33px;
   display: flex;
   align-items: center;
+
 }
 .md-text{
-  font-family: Open Sans;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -47,9 +35,9 @@
 }
 
 .sm-text{
-  font-family: Open Sans;
+  font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 14px;
   line-height: 19px;
 }

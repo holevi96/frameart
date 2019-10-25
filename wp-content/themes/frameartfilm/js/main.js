@@ -1,10 +1,10 @@
 jQuery(document).ready(function () {
 
-    jQuery('.main-carousel').flickity({
+    /*jQuery('.main-carousel').flickity({
         // options
-        freeScroll: true,
-        wrapAround: true
-    });
+        wrapAround: true,
+        prevNextButtons: false
+    });*/
 
 
     jQuery('.home .szolgaltatas').hover(function () {

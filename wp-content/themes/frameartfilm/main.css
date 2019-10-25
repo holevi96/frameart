@@ -119,21 +119,21 @@ $padding{
       display: block; } }
 
 .p-button {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: bold;
+  background: #CB0303;
+  padding: 10px;
+  border-radius: 15px;
   font-size: 18px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  padding: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  border: none;
+  padding-left: 25px;
+  cursor: pointer;
+  padding-right: 25px;
+  font-style: normal;
+  font-weight: 100;
   line-height: 25px;
+  border: 0;
   align-items: center;
   text-align: center;
-  cursor: pointer;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -148,7 +148,7 @@ $padding{
     background: #1E1E1E;
     color: #fff; }
   .p-button.pink {
-    background: #C40075;
+    background: #CB0303;
     color: #fff; }
   .p-button.tiny {
     color: #C40075; }
@@ -159,16 +159,16 @@ $padding{
     -webkit-box-shadow: 1px 5px 30px -6px #707070;
     -moz-box-shadow: 1px 5px 30px -6px #707070;
     box-shadow: 1px 5px 30px -6px #707070;
-    background: rgba(196, 0, 117, 0.9); }
+    background: #CB0303; }
   @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
     .p-button {
       font-size: 12px;
       padding: 10px; } }
 
-.xxl-text, .entry-title {
-  font-family: Open Sans;
+.xxl-text, #rolunk .weare h2, .entry-title {
+  font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 36px;
   line-height: 49px;
   position: relative;
@@ -176,35 +176,13 @@ $padding{
   margin-bottom: 30px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.87); }
-  .xxl-text:after, .entry-title:after {
-    display: block;
-    content: '';
-    width: 80px;
-    margin: 0 auto;
-    position: relative;
-    bottom: -8px;
-    height: 6px;
-    background: #1E196A;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    -ms-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
-    -ms-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px; }
   @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
-    .xxl-text, .entry-title {
+    .xxl-text, #rolunk .weare h2, .entry-title {
       font-size: 20px;
       line-height: 25px; } }
 
-.lg-text, .imgrow h2, .single-szolgaltatasok h2, .modal h2, .post-content h2 {
-  font-family: Open Sans;
+.lg-text, #rolunk .staytouch h2, #szolgaltatasok .flexrow h2, .imgrow h2, .single-szolgaltatasok h2, .modal h2, .post-content h2 {
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -212,17 +190,17 @@ $padding{
   display: flex;
   align-items: center; }
 
-.md-text, #header nav ul li, #footer #copyright, #footer h2, .home .szolgaltatas h2, #kapcsolat .tagok div div h3, .wpcf7-response-output, .szolgaltatas-nav div, .category-filter ul li, .szolgaltatasok .szolgaltatas h3 {
-  font-family: Open Sans;
+.md-text, #footer #copyright, #footer h2, #rolunk .weare p, .home .szolgaltatas h2, #kapcsolat .tagok div div h3, .wpcf7-response-output, .szolgaltatas-nav div, .category-filter ul li, .szolgaltatasok .szolgaltatas h3 {
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px; }
 
-.sm-text, #footer h3, .imgrow p, .partnereink .main-carousel .carousel-cell p, #kapcsolat .tagok div div h4, #kapcsolat .tagok div div p, #kapcsolat .kapcsolat input[type="text"], #kapcsolat .kapcsolat input[type="email"], #kapcsolat .kapcsolat .kapcsolat-notice, .calltoaction p, .single-szolgaltatasok p, .modal p, .post-content p {
-  font-family: Open Sans;
+.sm-text, .p-button, #header nav ul li, #footer h3, .home .szolgaltatas p, .imgrow p, .partnereink .main-carousel .carousel-cell p, #kapcsolat .tagok div div h4, #kapcsolat .tagok div div p, #kapcsolat .kapcsolat input[type="text"], #kapcsolat .kapcsolat input[type="email"], #kapcsolat .kapcsolat .kapcsolat-notice, .calltoaction p, .single-szolgaltatasok p, .modal p, .post-content p {
+  font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 14px;
   line-height: 19px; }
 
@@ -234,7 +212,7 @@ body.mobilemenu {
   flex-flow: row;
   background: white;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
   border-bottom: 2px solid #EFEFF4; }
@@ -260,7 +238,17 @@ body.mobilemenu {
       transform: translateY(0px);
       -webkit-transform: translateY(0px);
       opacity: 1; }
+  #header #logo {
+    height: 60px; }
+    #header #logo a {
+      height: 100%;
+      width: auto;
+      display: block; }
+      #header #logo a img {
+        height: 100%;
+        width: auto; }
   #header nav {
+    margin-top: 1rem;
     -webkit-transition-property: all;
     -moz-transition-property: all;
     -o-transition-property: all;
@@ -284,21 +272,21 @@ body.mobilemenu {
       transition-duration: 0.2s;
       float: left;
       margin-right: 15px;
-      -webkit-border-radius: 38px;
-      -moz-border-radius: 38px;
-      border-radius: 38px; }
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px; }
       #header nav ul li:hover {
         background: #EFEFF4; }
       #header nav ul li a {
         color: rgba(0, 0, 0, 0.87);
-        padding: 10px;
+        padding: 5px;
         padding-left: 20px;
         padding-right: 20px;
         display: block; }
       #header nav ul li.current-menu-item {
-        background: #1E196A; }
+        border: 1px solid #000; }
         #header nav ul li.current-menu-item a {
-          color: #fff; }
+          color: #000; }
       #header nav ul li#menu-item-131.current-menu-item {
         background: transparent; }
         #header nav ul li#menu-item-131.current-menu-item a {
@@ -362,33 +350,147 @@ body.fixed {
     .splash {
       height: 30vh; } }
 
-.video {
-  height: 70vh;
+@font-face {
+  font-family: Biko;
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff"); }
+
+.bckvideo {
+  position: relative;
+  height: 100vh;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  /* &:after{
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background: #fff;
+        opacity: 0.7;
+      }*/ }
   @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
-    .video {
+    .bckvideo {
       display: none; } }
-  .video .fullscreen {
+  .bckvideo .letter {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    height: 100%;
-    width: 177.77777778vh;
-    /* 100 * 16 / 9 */
-    min-width: 100%;
-    min-height: 56.25vw;
-    /* 100 * 9 / 16 */
-    transform: translate(-50%, -50%); }
+    top: 0; }
+    @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
+      .bckvideo .letter {
+        display: none; } }
+    .bckvideo .letter .fullscreen {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      height: 100%;
+      width: 177.77777778vh;
+      /* 100 * 16 / 9 */
+      min-width: 100%;
+      min-height: 56.25vw;
+      /* 100 * 9 / 16 */
+      transform: translate(-50%, -50%); }
+    .bckvideo .letter svg {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%; }
+    .bckvideo .letter svg text {
+      font-family: Source Sans Pro;
+      font-weight: 700;
+      font-size: 20px; }
+    .bckvideo .letter svg rect {
+      fill: rgba(255, 255, 255, 0.9); }
+    .bckvideo .letter svg > rect {
+      -webkit-mask: url(#mask);
+      mask: url(#mask); }
+  .bckvideo .logoanim {
+    position: absolute;
+    left: 60%;
+    top: 23%; }
+  .bckvideo .flexbox {
+    display: block;
+    position: relative;
+    top: -10rem;
+    z-index: 100; }
+    .bckvideo .flexbox button {
+      color: #FFFFFF; }
 
 a {
   display: block; }
 
-#szolgaltatasok {
-  padding-bottom: 3rem; }
+#rolunk {
+  padding-bottom: 0 !important; }
+  #rolunk .weare {
+    background: #000;
+    text-align: center;
+    padding: 3rem;
+    justify-content: space-around; }
+    #rolunk .weare h2 {
+      text-transform: unset;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      position: relative; }
+      #rolunk .weare h2:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #F20808;
+        right: -1rem;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        top: 0; }
+    #rolunk .weare p {
+      color: #fff; }
+  #rolunk .imgrow {
+    padding-bottom: 4rem; }
+  #rolunk .staytouch {
+    background: #000;
+    text-align: center;
+    padding: 2rem 20rem;
+    justify-content: space-between; }
+    #rolunk .staytouch h2 {
+      color: #fff;
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); }
+    #rolunk .staytouch .flexrow {
+      height: 50px; }
+      #rolunk .staytouch .flexrow img {
+        height: 100%;
+        width: auto;
+        margin-right: 1rem; }
 
-#referenciak .p-button {
-  margin-top: 3rem; }
+#szolgaltatasok {
+  padding-bottom: 3rem;
+  background: #212121;
+  padding-top: 10rem; }
+  #szolgaltatasok .entry-title {
+    color: #fff;
+    padding-bottom: 4rem; }
+  #szolgaltatasok .flexrow {
+    justify-content: space-around;
+    padding-bottom: 6rem; }
+    #szolgaltatasok .flexrow h2 {
+      color: #fff;
+      padding-bottom: 2rem;
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); }
+    #szolgaltatasok .flexrow .p-button {
+      color: #fff; }
+
+#referenciak {
+  position: relative;
+  margin-top: -6rem; }
+  #referenciak .p-button {
+    margin-top: 3rem; }
 
 #partnereink {
   padding-bottom: 3rem; }
@@ -402,6 +504,13 @@ a {
 
 .home .szolgaltatas {
   width: 25%;
+  float: left;
+  padding: 1rem;
+  height: 250px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: #222222f0;
   position: relative;
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -414,15 +523,18 @@ a {
   -ms-transition-duration: 0.2s;
   transition-duration: 0.2s; }
   .home .szolgaltatas img {
-    width: 100%; }
+    height: 40px;
+    width: auto;
+    float: left;
+    margin-left: -40px;
+    margin-right: 1rem; }
   .home .szolgaltatas h2 {
     color: #fff;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
-    position: absolute;
-    bottom: 1rem;
     display: block;
-    width: calc(100% - 2rem);
-    text-align: center;
+    text-align: left;
+    font-weight: 600;
     padding: 1rem;
     -webkit-transition-property: all;
     -moz-transition-property: all;
@@ -433,26 +545,17 @@ a {
     -moz-transition-duration: 0.2s;
     -o-transition-duration: 0.2s;
     -ms-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    margin-left: 1rem;
-    background: #222222f0;
-    border-radius: 10px; }
+    transition-duration: 0.2s; }
     @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
       .home .szolgaltatas h2 {
-        padding: 10px;
-        width: calc(100% - 40px);
-        margin-left: 20px;
         font-size: 13px; } }
+  .home .szolgaltatas p {
+    color: #fff;
+    padding: 0 1rem; }
   @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
     .home .szolgaltatas {
       width: 50%;
       float: left; } }
-  .home .szolgaltatas:hover {
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02); }
-    .home .szolgaltatas:hover h2 {
-      background: #fff;
-      color: #222222f0; }
 
 #referenciak, #rolunk {
   background: #fff;
@@ -572,7 +675,8 @@ a {
     width: 100%; }
     .partnereink .main-carousel .carousel-cell {
       width: 25%;
-      padding: 1rem; }
+      float: left;
+      text-align: center; }
       .partnereink .main-carousel .carousel-cell .logo div {
         height: 50px;
         margin: 0 auto;
@@ -584,6 +688,29 @@ a {
           height: 100%; }
       @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
         .partnereink .main-carousel .carousel-cell {
+          width: 100%; } }
+
+.ugyfeleink {
+  margin-bottom: 3rem; }
+  .ugyfeleink .main-carousel {
+    width: 100%; }
+    .ugyfeleink .main-carousel .carousel-cell {
+      width: calc(12.5% - 10px);
+      margin: 0 5px;
+      float: left;
+      text-align: center; }
+      .ugyfeleink .main-carousel .carousel-cell .logo div {
+        height: 50px;
+        margin: 0 auto;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        margin-bottom: 2rem; }
+        .ugyfeleink .main-carousel .carousel-cell .logo div img {
+          width: 100%;
+          height: auto; }
+      @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
+        .ugyfeleink .main-carousel .carousel-cell {
           width: 100%; } }
 
 @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>"/>
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -17,7 +17,7 @@
 <div id="wrapper" class="hfeed">
     <header id="header">
         <div id="logo">
-            <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pdlogo.png" alt=""></a>
+            <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt=""></a>
         </div>
         <div class="material-icons mobile menu-opener">menu</div>
         <nav id="menu" class="closed">
