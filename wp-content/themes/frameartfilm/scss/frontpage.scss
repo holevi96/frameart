@@ -394,6 +394,13 @@ a{
           margin-bottom: 2rem;
           img{
             height: 100%;
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            @include tr(0.2s);
+            &:hover{
+              -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+              filter: grayscale(0%);
+            }
           }
         }
       }
@@ -429,6 +436,13 @@ a{
           img{
             width: 100%;
             height: auto;
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            @include tr(0.2s);
+            &:hover{
+              -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+              filter: grayscale(0%);
+            }
           }
         }
       }

@@ -191,10 +191,10 @@ $szolgaltatasok = get_posts(array(
 </div>
 
 <div id="kapcsolat">
-    <div class="entry-title">Kapcsolat</div>
+    <div class="entry-title">Ajánlatkérés</div>
 
     <div class="fluid-container">
-        <div class="tagok">
+        <!--<div class="tagok">
             <?php if (have_rows('tagok','options')):
                 while (have_rows('tagok','options')) : the_row(); ?>
                     <div>
@@ -209,7 +209,7 @@ $szolgaltatasok = get_posts(array(
                 <?php endwhile;
             endif; ?>
 
-        </div>
+        </div>-->
         <div class="kapcsolat ">
             <?php echo do_shortcode('[contact-form-7 id="88" title="Kapcsolati űrlap"]'); ?>
         </div>

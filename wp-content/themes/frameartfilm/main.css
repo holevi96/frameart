@@ -685,7 +685,24 @@ a {
         border-radius: 50px;
         margin-bottom: 2rem; }
         .partnereink .main-carousel .carousel-cell .logo div img {
-          height: 100%; }
+          height: 100%;
+          -webkit-filter: grayscale(100%);
+          /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+          -webkit-transition-property: all;
+          -moz-transition-property: all;
+          -o-transition-property: all;
+          -ms-transition-property: all;
+          transition-property: all;
+          -webkit-transition-duration: 0.2s;
+          -moz-transition-duration: 0.2s;
+          -o-transition-duration: 0.2s;
+          -ms-transition-duration: 0.2s;
+          transition-duration: 0.2s; }
+          .partnereink .main-carousel .carousel-cell .logo div img:hover {
+            -webkit-filter: grayscale(0%);
+            /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%); }
       @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
         .partnereink .main-carousel .carousel-cell {
           width: 100%; } }
@@ -708,7 +725,24 @@ a {
         margin-bottom: 2rem; }
         .ugyfeleink .main-carousel .carousel-cell .logo div img {
           width: 100%;
-          height: auto; }
+          height: auto;
+          -webkit-filter: grayscale(100%);
+          /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+          -webkit-transition-property: all;
+          -moz-transition-property: all;
+          -o-transition-property: all;
+          -ms-transition-property: all;
+          transition-property: all;
+          -webkit-transition-duration: 0.2s;
+          -moz-transition-duration: 0.2s;
+          -o-transition-duration: 0.2s;
+          -ms-transition-duration: 0.2s;
+          transition-duration: 0.2s; }
+          .ugyfeleink .main-carousel .carousel-cell .logo div img:hover {
+            -webkit-filter: grayscale(0%);
+            /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%); }
       @media only screen and (min-width: 529px) and (max-width: 740px), only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 741px) and (max-width: 980px) {
         .ugyfeleink .main-carousel .carousel-cell {
           width: 100%; } }
