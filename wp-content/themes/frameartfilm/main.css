@@ -343,7 +343,7 @@ body.fixed {
 .splash {
   height: 70vh;
   width: 100%;
-  background: url(/wp-content/themes/productivedecor/img/hero.jpg) center;
+  background: url(/wp-content/themes/frameartfilm/img/hero.jpg) center;
   -webkit-background-size: cover;
   background-size: cover; }
   @media only screen and (min-width: 1px) and (max-width: 528px), only screen and (min-width: 529px) and (max-width: 740px) {
@@ -404,7 +404,7 @@ body.fixed {
     .bckvideo .letter svg text {
       font-family: Source Sans Pro;
       font-weight: 700;
-      font-size: 20px; }
+      font-size: 18px; }
     .bckvideo .letter svg rect {
       fill: rgba(255, 255, 255, 0.9); }
     .bckvideo .letter svg > rect {
@@ -580,7 +580,17 @@ a {
   .referenciak .referencia {
     width: calc(33% - 10px);
     margin: 5px;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -ms-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
     .referenciak .referencia:before {
       content: '';
       width: 100%;
@@ -608,6 +618,19 @@ a {
     @media only screen and (min-width: 741px) and (max-width: 980px) {
       .referenciak .referencia {
         width: calc(31% - 4px); } }
+    .referenciak .referencia a {
+      position: relative; }
+      .referenciak .referencia a.video:after {
+        display: block;
+        content: '';
+        background: url(/wp-content/themes/frameartfilm/img/youtube_icon.svg) center;
+        width: 80px;
+        height: 50px;
+        z-index: 1000;
+        background-size: 100%;
+        position: absolute;
+        left: 40%;
+        top: 40%; }
     .referenciak .referencia img {
       width: 100%;
       -webkit-border-radius: 10px;
@@ -881,22 +904,22 @@ body.category {
     text-align: center;
     width: 100%;
     /*    &.nyomda{
-      background-image:url(/wp-content/themes/productivedecor/img/nyomdatechnika.jpg);
+      background-image:url(/wp-content/themes/frameartfilm/img/nyomdatechnika.jpg);
       background-size: cover;
 
       &.active{
         border:1px transparent;
-        background-image:url(/wp-content/themes/productivedecor/img/nyomdatechnika.jpg);
+        background-image:url(/wp-content/themes/frameartfilm/img/nyomdatechnika.jpg);
         background-size: cover;
       }
     }
 
     &.design{
 
-      background-image:url(/wp-content/themes/productivedecor/img/design_active.png);
+      background-image:url(/wp-content/themes/frameartfilm/img/design_active.png);
       background-size: cover;
       &.active{
-        background-image:url(/wp-content/themes/productivedecor/img/design_active.png);
+        background-image:url(/wp-content/themes/frameartfilm/img/design_active.png);
         border:1px transparent;
         background-size: cover;
       }
@@ -904,21 +927,21 @@ body.category {
 
     &.kihelyezes{
 
-      background-image:url(/wp-content/themes/productivedecor/img/kihelyezes_active.png);
+      background-image:url(/wp-content/themes/frameartfilm/img/kihelyezes_active.png);
       background-size: cover;
       &.active{
 
-        background-image:url(/wp-content/themes/productivedecor/img/kihelyezes_active.png);
+        background-image:url(/wp-content/themes/frameartfilm/img/kihelyezes_active.png);
         background-size: cover;
       }
     }
     &.textil_nyomtatas{
 
-      background-image:url(/wp-content/themes/productivedecor/img/textil.jpg);
+      background-image:url(/wp-content/themes/frameartfilm/img/textil.jpg);
       background-size: cover;
       &.active{
         border:1px transparent;
-        background-image:url(/wp-content/themes/productivedecor/img/textil.jpg);
+        background-image:url(/wp-content/themes/frameartfilm/img/textil.jpg);
         background-size: cover;
       }
     }*/ }
@@ -1233,6 +1256,40 @@ body.category {
     display: none; }
   .modal #footer {
     display: none; }
+
+.pswp .pswp__zoom-wrap {
+  text-align: center; }
+  .pswp .pswp__zoom-wrap:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  .pswp .pswp__zoom-wrap .wrapper {
+    line-height: 0;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1045; }
+  .pswp .pswp__zoom-wrap .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    width: 100%; }
+    .pswp .pswp__zoom-wrap .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+  .pswp .pswp__zoom-wrap video {
+    width: 100% !important;
+    height: auto !important; }
 
 body {
   background: #EFEFF4; }

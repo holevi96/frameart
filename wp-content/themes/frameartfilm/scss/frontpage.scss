@@ -72,8 +72,7 @@ body.fixed{
     svg text {
       font-family: Source Sans Pro;
       font-weight: 700;
-
-      font-size: 20px;
+      font-size: 18px;
     }
     svg rect {
       fill: rgba(255, 255, 255, 0.9);
@@ -271,6 +270,7 @@ a{
     width:calc(33% - 10px);
     margin: 5px;
     cursor:pointer;
+    @include tr(0.2s);
     &:before{
       content: '';
       width: 100%;
@@ -290,6 +290,23 @@ a{
     }
     @media #{$md}{
       width:calc(31% - 4px);
+    }
+    a{
+      position: relative;
+      &.video{
+        &:after{
+          display:block;
+          content: '';
+          background: url(#{$baseURL}/img/youtube_icon.svg) center;
+          width:80px;
+          height: 50px;
+          z-index: 1000;
+          background-size:100%;
+          position: absolute;
+          left:40%;
+          top:40%;
+        }
+      }
     }
     img{
       width:100%;

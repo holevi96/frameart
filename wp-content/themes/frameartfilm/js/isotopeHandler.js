@@ -65,12 +65,20 @@ jQuery(document).ready(function () {
                         $size   = jQuery(this).data('size').split('x'),
                         $width  = $size[0],
                         $height = $size[1];
-
-                    var item = {
-                        src : $href,
-                        w   : $width,
-                        h   : $height
+                    var item;
+                    if(jQuery(this).data("video")){
+                        item = {
+                            html:"<div class=\"wrapper\"><div class=\"video-wrapper\"><iframe class=\"pswp__video\" width=\"960\" height=\"640\" src=\"https://www.youtube-nocookie.com/embed/" + jQuery(this).data("video") +"?rel=0\" frameborder=\"0\" allowfullscreen></iframe></div></div>"
+                        }
+                    }else{
+                        item = {
+                             src : $href,
+                             w   : $width,
+                             h   : $height
+                        }
                     }
+
+
 
                     items.push(item);
                 });

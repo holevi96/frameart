@@ -12,8 +12,8 @@
             <defs>
                 <mask id="mask" x="0" y="0" width="100%" height="100%" >
                     <rect x="0" y="0" width="100%" height="100%" />
-                    <text x="90"  y="30">We are</text>
-                    <text x="120"  y="50">Frame Art.</text>
+                    <text x="95"  y="30">We are</text>
+                    <text x="110"  y="50">Frame Art.</text>
                 </mask>
             </defs>
             <rect x="0" y="0" width="100%" height="100%" />
@@ -48,9 +48,18 @@
                 "post_status" => 'publish'
             ));
             $cnt = 0;
-            foreach ($refs as $ref) { ?>
+            foreach ($refs as $ref) {
+                $video = get_field("youtube_url",$ref->ID);
+                if($video){
+                    $video = explode("?v=",$video)[1];
+                }
+
+                ?>
                 <figure class="picture referencia"  itemprop="associatedMedia">
-                    <a href="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[0]; ?>" itemprop="contentUrl" data-size="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[1]; ?>x<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[2]; ?>" data-index="<?php echo $cnt; ?>">
+                    <a class="<?php echo ($video)?"video":""; ?>" data-video="<?php echo $video; ?>" href="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[0]; ?>"
+                       itemprop="contentUrl"
+                       data-size="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[1]; ?>x<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[2]; ?>"
+                       data-index="<?php echo $cnt; ?>">
                         <?php if($cnt<9): ?>
                             <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'medium_large')[0]; ?>"  itemprop="thumbnail">
                         <?php endif; ?>
