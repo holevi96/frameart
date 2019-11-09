@@ -16,9 +16,20 @@
 </div>-->
 <div id="wrapper" class="hfeed">
     <header id="header">
-        <div id="logo">
-            <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt=""></a>
+        <div class="left">
+            <div id="logo">
+                <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt=""></a>
+            </div>
+            <nav>
+                <ul class="site-switcher clearfix">
+                    <li><a href="#">Agency</a></li>
+                    <li class="active"><a href="#">Film factory</a></li>
+                    <li><a href="#">Web development</a></li>
+                </ul>
+            </nav>
         </div>
+
+
         <div class="material-icons mobile menu-opener">menu</div>
         <nav id="menu" class="closed">
             <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>

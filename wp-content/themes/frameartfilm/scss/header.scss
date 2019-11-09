@@ -16,8 +16,11 @@ body.mobilemenu{
     position: fixed;
     top:0;
     opacity:0;
+
     width:100%;
-    z-index: 100;
+    z-index: 1000;
+
+
     transform: translateY(-200px);
     -webkit-transform: translateY(-200px);
     &.opened{
@@ -39,6 +42,29 @@ body.mobilemenu{
       }
     }
 
+  }
+  .left{
+    display:flex;
+    nav{
+      padding-right: 3rem;
+      .site-switcher{
+        border-right: 1px solid #ccc;
+      }
+      margin-left: 3rem;
+
+      .active{
+        background-image:url(#{$baseURL}/img/FAH.png);
+        background-size: cover;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        a{
+          color:#fff !important;
+          font-weight: 600;
+        }
+
+      }
+    }
   }
   nav{
     margin-top: 1rem;

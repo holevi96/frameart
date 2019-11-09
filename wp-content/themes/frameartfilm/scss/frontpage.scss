@@ -157,31 +157,15 @@ a{
     }
   }
 }
-#szolgaltatasok{
-  padding-bottom: 3rem;
-  background: #212121;
-  padding-top: 10rem;
-  .entry-title{
-    color:#fff;
-    padding-bottom: 4rem;
-  }
-  .flexrow{
-    justify-content: space-around;
-    h2{
-      @extend .lg-text;
-      color:#fff;
-      padding-bottom: 2rem;
-      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    }
-    .p-button{
-      color:#fff;
-    }
-    padding-bottom: 6rem;
-  }
-}
+
 #referenciak {
   position: relative;
+
+
   margin-top:-6rem;
+  @media #{$sm},#{$xs},#{$md}{
+    margin-top: 0;
+  }
   .p-button{
     margin-top: 3rem;
   }
@@ -251,6 +235,9 @@ a{
 }
 .home .referenciak{
   height: 68vh !important;
+  @media #{$sm},#{$xs},#{$md}{
+    height: 28vh !important;
+  }
   overflow: hidden;
 }
 .referenciak{
@@ -298,9 +285,9 @@ a{
           display:block;
           content: '';
           background: url(#{$baseURL}/img/youtube_icon.svg) center;
-          width:80px;
-          height: 50px;
-          z-index: 1000;
+          width:25%;
+          height: 17%;
+          z-index: 10;
           background-size:100%;
           position: absolute;
           left:40%;
@@ -509,7 +496,7 @@ a{
 
     }
   }
-  .kapcsolat{
+  .kapcsolat,.wpcf7-form{
     margin:2rem 4rem;
     padding:1rem;
     @media #{$sm},#{$xs},#{$md}{
@@ -523,42 +510,68 @@ a{
         width:100%;
       }
     }
-    input[type="text"],input[type="email"]{
-      width:100%;
-      border:0;
-      padding:1rem;
-      margin-bottom: 1rem;
-      @extend .sm-text;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-    }
-    textarea{
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-      width:100%;
-      margin:2rem 0;
-      border:0;
-      padding:1rem;
-    }
-    input[type="submit"]{
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-    }
-    .kapcsolat-notice{
-      text-align: left;
-      position: relative;
-      top: -25px;
-      display: block;
-      @extend .sm-text;
-    }
+
+
 
 
   }
 }
-
+input[type="text"],input[type="email"]{
+  width:100%;
+  border:1px solid #ccc !important;
+  padding:1rem;
+  margin-bottom: 1rem;
+  @extend .sm-text;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+.kapcsolat-notice{
+  text-align: left;
+  position: relative;
+  top: -25px;
+  display: block;
+  @extend .sm-text;
+}
+.sgpb-main-html-content-wrapper{
+  overflow: hidden !important;
+  h2{
+    @extend .lg-text;
+    padding-bottom: 1rem;
+  }
+  .flexrow{
+    input{
+      width:98% !important;
+    }
+    span{
+      input{
+        float:right;
+      }
+      &:first-child{
+        input{
+          float:left;
+        }
+      }
+    }
+  }
+}
+#sgpb-popup-dialog-main-div{
+  overflow: hidden !important;
+}
+textarea{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px !important;
+  width:100% !important;
+  margin:2rem 0;
+  border:1px solid #ccc !important;
+  padding:1rem;
+}
+input[type="submit"]{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
 .wpcf7-response-output{
   @extend .md-text;
   text-align:left;
@@ -571,6 +584,9 @@ a{
     color:darkred;
   }
 }
+.wpcf7-form-control-wrap{
+  width:100%;
+}
 .wpcf7-not-valid-tip{
   position: absolute;
   top: 10px;
@@ -580,3 +596,31 @@ a{
   font-family: Open Sans;
 }
 
+#szolgaltatasok{
+  padding-bottom: 3rem;
+  background: #212121;
+  padding-top: 10rem;
+  .entry-title{
+    color:#fff;
+    padding-bottom: 4rem;
+  }
+  .flexrow{
+    justify-content: space-around;
+    h2{
+      @extend .lg-text;
+      color:#fff;
+      padding-bottom: 2rem;
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    .p-button{
+      color:#fff;
+    }
+    padding-bottom: 6rem;
+    .sg-show-popup{
+      @extend .p-button;
+      .wpcf7-form{
+        @extend .kapcsolat;
+      }
+    }
+  }
+}

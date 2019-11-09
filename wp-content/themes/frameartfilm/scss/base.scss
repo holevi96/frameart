@@ -23,6 +23,11 @@ body{
   }
 
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 .single .content, .single .post-content, .page #content{
   min-height: 32vh;
 }

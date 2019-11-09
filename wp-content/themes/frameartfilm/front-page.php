@@ -141,7 +141,8 @@ $szolgaltatasok = get_posts(array(
     <div class="flexrow" >
         <div>
             <h2>Az ötlettől a megvalósításig.</h2>
-            <div class="p-button">Ajánlatot kérek</div>
+<!--            <div class="p-button">Ajánlatot kérek</div>-->
+            <?php echo do_shortcode('[sg_popup class="p-button" id="432" event="click"]Ajánlatot kérek[/sg_popup]'); ?>
         </div>
 
     </div>
