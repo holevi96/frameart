@@ -19,7 +19,7 @@
             <rect x="0" y="0" width="100%" height="100%" />
         </svg>
         <div class="flexbox">
-            <button class="p-button">Mutass többet!</button>
+            <button class="p-button"><a href="#referenciak">Mutass többet!</a></button>
         </div>
     </div>
     <div class="logoanim">

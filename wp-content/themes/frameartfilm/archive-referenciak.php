@@ -5,11 +5,26 @@
 <h1 class="entry-title">Referenciák</h1>
 
     <div class="pictures referenciak" itemscope >
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post();
+            $cnt=0;
+            $ref = get_the_ID();
+
+            $video = get_field("youtube_url",$ref);
+            if($video){
+                $video = explode("?v=",$video)[1];
+            }
+            ?>
+
+
 
             <figure class="picture referencia"  itemprop="associatedMedia">
-                <a href="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[0]; ?>" itemprop="contentUrl" data-size="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[1]; ?>x<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'full')[2]; ?>" data-index="<?php echo $cnt; ?>">
-                    <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref->ID), 'medium_large')[0]; ?>"  itemprop="thumbnail">
+                <a class="<?php echo ($video)?"video":""; ?>" data-video="<?php echo $video; ?>" href="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref), 'full')[0]; ?>"
+                   itemprop="contentUrl"
+                   data-size="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref), 'full')[1]; ?>x<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref), 'full')[2]; ?>"
+                   data-index="<?php echo $cnt; ?>">
+                    <?php if($cnt<9): ?>
+                        <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($ref), 'medium_large')[0]; ?>"  itemprop="thumbnail">
+                    <?php endif; ?>
                 </a>
             </figure>
             <?php

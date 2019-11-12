@@ -51,3 +51,12 @@ jQuery(window).scroll(function () {
         }
     }
 });
+
+// Slow scroll with anchors
+(function(jQuery){
+    jQuery(document).on('click', 'a[href^=#]', function(e){
+        e.preventDefault();
+        var id = jQuery(this).attr('href');
+        jQuery('html,body').animate({scrollTop: jQuery(id).offset().top}, 500);
+    });
+})(jQuery);
